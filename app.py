@@ -28,7 +28,7 @@ def main():
     st.text("Please upload an image file")
     
 def predict_class(image):
-  model=models.load_model(r"C:\Users\Rumesha\Desktop\ru\papaya\papaya\cnn.h5")
+  model=models.load_model(r'C:\Users\Rumesha\Desktop\new\my_model2.hdf5')
   shape=((256,256,3))
   tf.keras.Sequential([hub.KerasLayer(model,input_shape=shape)])
   test_image=image.resize((256,256))
@@ -41,7 +41,7 @@ def predict_class(image):
   scores=tf.nn.softmax(predictions[0])
   scores= scores.numpy()
   image_class=class_names[np.argmax(scores)]
-  results="This image most likely belongs to {}with a {:.2f} percent confidence.",format(image_class), 100 * np.max(scores)
+  results="This image most likely belongs to {} with a {:.2f} percent confidence.",format(image_class), 100 * np.max(scores)
 
   return results
 
