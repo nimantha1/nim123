@@ -1,0 +1,10 @@
+h5py
+keras
+matplotlib
+numpy
+opencv_python_headless
+Pillow
+streamlit
+tensorflow
+tensorflow_cpu
+tensorflow_hub
