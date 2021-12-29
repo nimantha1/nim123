@@ -28,7 +28,7 @@ def main():
     st.text("Please upload an image file")
     
 def predict_class(image):
-  model=models.load_model(r'C:\Users\Rumesha\Desktop\disease-classifier\cnn.h5')
+  model=models.load_model(r'cnn.h5')
   shape=((256,256,3))
   tf.keras.Sequential([hub.KerasLayer(model,input_shape=shape)])
   test_image=image.resize((256,256))
