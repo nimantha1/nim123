@@ -47,5 +47,3 @@ def predict_class(image):
 
 if __name__ == "__main__":
     main() 
-
-
